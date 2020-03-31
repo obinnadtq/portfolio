@@ -1,9 +1,13 @@
 <template>
   <div class="header">
-    <p>Hello</p>
-    <h3>I am Obinna</h3>
-    <p> Software Developer</p>
-    <p>& Data Scientist</p>    
+    <ul>
+      <li><a href="#home">Home </a></li>
+      <li><a href="#about">About Me </a></li>
+      <li><a href="#portfolio">Portfolio </a></li>
+      <li><a href="#contact">Contact </a></li>
+      <li><a href="#blog"> Blog </a></li>
+    </ul> 
+    
   </div>
 </template>
 
@@ -17,18 +21,11 @@ export default {
 </script>
 
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
+ul{
   list-style-type: none;
-  padding: 0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+li{
+  display: inline;
 }
 </style>

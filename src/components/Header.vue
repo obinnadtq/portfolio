@@ -1,22 +1,20 @@
 <template>
-  <div class="header">
-    <ul class="nav-bar">
-      <li>
-        <a href="#home">Home</a>
-      </li>
-      <li>
-        <a href="#about">About Me</a>
-      </li>
-      <li>
-        <a href="#portfolio">Portfolio</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-      <li>
-        <a href="#blog">Blog</a>
-      </li>
-    </ul>
+  <div class="container">
+    <div class="flex-item">
+      <a href="#home">Home</a>
+    </div>
+    <div class="flex-item">
+      <a href="#about">About Me</a>
+    </div>
+    <div class="flex-item">
+      <a href="#portfolio">Portfolio</a>
+    </div>
+    <div class="flex-item">
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="flex-item">
+      <a href="#blog">Blog</a>
+    </div>
   </div>
 </template>
 
@@ -28,28 +26,25 @@ export default {
 </script>
 
 <style scoped>
-.header {
+.container {
   background-color: #f8f8f8;
-  height: 70px;
-  font-family: sans-serif;
-  text-align: right;
+  font-family: arial, sans-serif;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 400px;
 }
 
-ul {
-  list-style-type: none;
-  padding: 25px 400px 0px 0px;
-  top: 0%;
-}
-
-li {
-  display: inline;
-}
-
-li a {
-  padding-left: 50px;
+.flex-item {
   color: black;
+  padding: 1em;
+}
+
+a {
   text-decoration: none;
 }
+
 a:link,
 a:visited {
   color: black;
@@ -58,6 +53,4 @@ a:hover,
 a:active {
   color: #feb633;
 }
-
-
 </style>

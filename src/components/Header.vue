@@ -1,19 +1,21 @@
 <template>
   <div class="container">
-    <div class="flex-item">
-      <a href="#home">Home</a>
-    </div>
-    <div class="flex-item">
-      <a href="#about">About Me</a>
-    </div>
-    <div class="flex-item">
-      <a href="#portfolio">Portfolio</a>
-    </div>
-    <div class="flex-item">
-      <a href="#contact">Contact</a>
-    </div>
-    <div class="flex-item">
-      <a href="#blog">Blog</a>
+    <div class="flex-container">
+      <div class="flex-item">
+        <a href="#home">Home</a>
+      </div>
+      <div class="flex-item">
+        <a href="#about">About Me</a>
+      </div>
+      <div class="flex-item">
+        <a href="#portfolio">Portfolio</a>
+      </div>
+      <div class="flex-item">
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="flex-item">
+        <a href="#blog">Blog</a>
+      </div>
     </div>
   </div>
 </template>
@@ -32,17 +34,21 @@ export default {
   display: flex;
   height: 100px;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 400px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
-.flex-item {
+.flex-container {
+  display: flex;
   color: black;
-  padding: 1em;
+  margin-left: 600px;
 }
 
 a {
   text-decoration: none;
+  margin-left: 40px;
 }
 
 a:link,

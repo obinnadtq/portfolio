@@ -28,7 +28,7 @@ export default {
 h2 {
   font-size: 70px;
   font-weight: 100;
-  color: gray;
+  color: black;
   margin-bottom: 5px;
 }
 

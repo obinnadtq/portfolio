@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="home">
     <div class="intro">
       <h2>I'm Obinna</h2>
       <h4>Software Developer & Data Scientist</h4>

@@ -8,9 +8,6 @@
         <a href="#about">About Me</a>
       </div>
       <div class="flex-item">
-        <a href="#portfolio">Portfolio</a>
-      </div>
-      <div class="flex-item">
         <a href="#contact">Contact</a>
       </div>
       <div class="flex-item">

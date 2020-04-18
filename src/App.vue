@@ -12,7 +12,6 @@
 import Header from './components/Header.vue'
 import Summary from './components/Summary.vue'
 import AboutMe from './components/AboutMe.vue'
-import Projects from './components/Projects.vue'
 import Contact from './components/Contact.vue'
 
 export default {
@@ -21,7 +20,6 @@ export default {
     Header,
     Summary,
     AboutMe,
-    Projects,
     Contact
   }
 }

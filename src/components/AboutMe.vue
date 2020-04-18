@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="about">
     <div>
       <h2>About Me</h2>
     </div>
@@ -25,7 +25,6 @@ export default {
 <style scoped>
 .container {
   display: flex;
-  height: 300px;
   border-style: outset none inset none;
   background-color: #f8f8f8;
   font-family: arial, sans-serif;

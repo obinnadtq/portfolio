@@ -10,7 +10,7 @@
         I also enjoy sharing knowledge and would avail myself at every opportunity to do teach and impart knowledge.
       </p>
       <div>
-        <a href="file://Users/obinnaisiwekpeni/Desktop/ObinnaIsiwekpeni.pdf" class="download-button" download="ObinnaIsiwekpeni.pdf">Download CV</a>
+        <a href="http://localhost:8080/ObinnaIsiwekpeni.pdf" class="download-button" download>Download</a>
       </div>
     </div>
   </div>

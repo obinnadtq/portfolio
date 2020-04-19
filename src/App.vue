@@ -3,7 +3,6 @@
     <Header></Header>
     <Summary></Summary>
     <about-me></about-me>
-    <projects></projects>
     <contact></contact>
   </div>
 </template>

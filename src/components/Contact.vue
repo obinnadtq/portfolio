@@ -25,38 +25,52 @@
         </div>
         <div>
           <span class="twitter-icon">
-            <a href="https://twitter.com/hilaryobinna" target="_blank"><font-awesome-icon :icon="['fab','twitter']" /></a>
+            <a href="https://twitter.com/hilaryobinna" target="_blank">
+              <font-awesome-icon :icon="['fab','twitter']" />
+            </a>
           </span>
           <span class="facebook-icon">
-            <a href="https://www.facebook.com/obinna.hilary" target="_blank"><font-awesome-icon :icon="['fab','facebook']" /></a>
+            <a href="https://www.facebook.com/obinna.hilary" target="_blank">
+              <font-awesome-icon :icon="['fab','facebook']" />
+            </a>
           </span>
           <span class="linkedin-icon">
-            <a href="https://www.linkedin.com/in/obinna-hilary-a122017b/" target="_blank"><font-awesome-icon :icon="['fab','linkedin-in']" /></a>
+            <a href="https://www.linkedin.com/in/obinna-hilary-a122017b/" target="_blank">
+              <font-awesome-icon :icon="['fab','linkedin-in']" />
+            </a>
           </span>
           <span class="github-icon">
-            <a href="https://github.com/obinnadtq" target="_blank"><font-awesome-icon :icon="['fab','github']" /></a>
+            <a href="https://github.com/obinnadtq" target="_blank">
+              <font-awesome-icon :icon="['fab','github']" />
+            </a>
           </span>
         </div>
       </div>
       <div class="contact-form">
-        <form action>
-          <label>NAME</label>
+        <form @submit.prevent="checkForm" action="mailer.php" method="post">
+          <p v-if="errors.length">
+            <b>Please correct the following error(s):</b>
+          </p>
+          <ul>
+            <li v-for="error in errors" :key="error">{{error}}</li>
+          </ul>
+          <label for="name">NAME</label>
           <br />
-          <input type="text" placeholder="Type your name" />
+          <input type="text" placeholder="Enter your name"  v-model="name"/>
           <br />
-          <label>PHONE NUMBER</label>
+          <label for="number">PHONE NUMBER</label>
           <br />
-          <input type="tel" placeholder="Type your phone number" />
+          <input type="tel" placeholder="Enter your phone number" v-model="telephone"/>
           <br />
-          <label>EMAIL</label>
+          <label for="email">EMAIL</label>
           <br />
-          <input type="email" placeholder="Type your email address" />
+          <input type="email" placeholder="Enter your email address" v-model="email" />
           <br />
-          <label>YOUR MESSAGE</label>
+          <label for="message">YOUR MESSAGE</label>
           <br />
-          <textarea placeholder="Type your message here"></textarea>
+          <textarea placeholder="Enter your message here" v-model="message"></textarea>
           <br />
-          <input type="submit" value="Send Message">
+          <input type="submit" value="Send Message" />
         </form>
       </div>
       <div></div>
@@ -66,7 +80,42 @@
 
 <script>
 export default {
-  name: "Contact"
+  name: "Contact",
+  data () {
+    return {
+      errors: [],
+      name: null,
+      telephone: null,
+      email: null,
+      message: null
+    }
+  },
+
+  methods: {
+    checkForm(e){
+      if(this.name && this.email && this.message) {
+        return true;
+      }
+      this.errors = [];
+      this.name='';
+      this.email='';
+      this.telephone='';
+      this.message='';
+
+      if(!this.name){
+        this.errors.push('Please enter your name')
+      }
+
+      if(!this.email){
+        this.errors.push('Please enter your email address')
+      }
+
+      if(!this.message){
+        this.errors.push('Please enter a message')
+      }
+      e.preventDefault();
+    }
+  }
 };
 </script>
 
@@ -81,7 +130,8 @@ h1 {
 }
 
 .facebook-icon,
-.linkedin-icon, .github-icon {
+.linkedin-icon,
+.github-icon {
   color: gray;
   margin: 10px;
 }
@@ -95,11 +145,13 @@ h1 {
   margin-right: 10px;
   color: gray;
 }
-.info-class{
+.info-class {
   padding: 5px;
 }
 
-input[type=text], input[type=tel], input[type=email] {
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   width: 300%;
   height: 10px;
   padding: 14px 20px;
@@ -107,7 +159,7 @@ input[type=text], input[type=tel], input[type=email] {
   border-radius: 4px;
 }
 
-input[type=submit]{
+input[type="submit"] {
   width: 100%;
   padding: 14px 20px;
   margin: 8px 0;
@@ -115,12 +167,13 @@ input[type=submit]{
   border-radius: 4px;
   cursor: pointer;
 }
-input[type=submit]:hover {
+
+input[type="submit"]:hover {
   background-color: white;
-  color:#feb633;
+  color: #feb633;
 }
 
-textarea{
+textarea {
   width: 300%;
   height: 100px;
   padding: 14px 20px;
@@ -132,7 +185,4 @@ a:link,
 a:visited {
   color: gray;
 }
-
-
-
 </style>

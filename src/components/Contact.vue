@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="contact-form">
-        <form @submit.prevent="checkForm" action="mailer.php" method="post">
+        <form @submit.prevent="checkForm" method="post" data-netlify="true">
           <p v-if="errors.length">
             <b>Please correct the following error(s):</b>
           </p>
@@ -56,11 +56,11 @@
           </ul>
           <label for="name">NAME</label>
           <br />
-          <input type="text" placeholder="Enter your name"  v-model="name"/>
+          <input type="text" placeholder="Enter your name" v-model="name" />
           <br />
           <label for="number">PHONE NUMBER</label>
           <br />
-          <input type="tel" placeholder="Enter your phone number" v-model="telephone"/>
+          <input type="tel" placeholder="Enter your phone number" v-model="telephone" />
           <br />
           <label for="email">EMAIL</label>
           <br />
@@ -81,37 +81,37 @@
 <script>
 export default {
   name: "Contact",
-  data () {
+  data() {
     return {
       errors: [],
       name: null,
       telephone: null,
       email: null,
       message: null
-    }
+    };
   },
 
   methods: {
-    checkForm(e){
-      if(this.name && this.email && this.message) {
+    checkForm(e) {
+      if (this.name && this.email && this.message) {
         return true;
       }
       this.errors = [];
-      this.name='';
-      this.email='';
-      this.telephone='';
-      this.message='';
+      this.name = "";
+      this.email = "";
+      this.telephone = "";
+      this.message = "";
 
-      if(!this.name){
-        this.errors.push('Please enter your name')
+      if (!this.name) {
+        this.errors.push("Please enter your name");
       }
 
-      if(!this.email){
-        this.errors.push('Please enter your email address')
+      if (!this.email) {
+        this.errors.push("Please enter your email address");
       }
 
-      if(!this.message){
-        this.errors.push('Please enter a message')
+      if (!this.message) {
+        this.errors.push("Please enter a message");
       }
       e.preventDefault();
     }
@@ -152,7 +152,7 @@ h1 {
 input[type="text"],
 input[type="tel"],
 input[type="email"] {
-  width: 300%;
+  width: 250%;
   height: 10px;
   padding: 14px 20px;
   margin: 8px 0;
@@ -174,7 +174,7 @@ input[type="submit"]:hover {
 }
 
 textarea {
-  width: 300%;
+  width: 250%;
   height: 100px;
   padding: 14px 20px;
   margin: 8px 0;
@@ -184,5 +184,37 @@ textarea {
 a:link,
 a:visited {
   color: gray;
+}
+
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 300px;
+    height: 10px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+  }
+  textarea {
+    width: 300px;
+    height: 100px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"] {
+    width: 100px;
+    padding: 14px 10px;
+    margin: 8px 0;
+    background-color: lightgray;
+    border-radius: 4px;
+    cursor: pointer;
+  }
 }
 </style>

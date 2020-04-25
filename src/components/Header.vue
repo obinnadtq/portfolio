@@ -40,7 +40,6 @@ export default {
 .flex-container {
   display: flex;
   color: black;
-  margin-left: 600px;
 }
 
 a {

@@ -32,9 +32,20 @@ h2 {
   margin-bottom: 5px;
 }
 
-h4{
+h4 {
   font-size: 25px;
   color: gray;
   margin-top: 10px;
+}
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro{
+    padding-top: 40px;
+  }
+
 }
 </style>

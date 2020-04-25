@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="main-project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Header></Header>
     <Summary></Summary>
     <about-me></about-me>

@@ -1,5 +1,6 @@
 <template>
   <div class="container" id="about">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <div>
       <h2>About Me</h2>
     </div>
@@ -10,7 +11,7 @@
         I also enjoy sharing knowledge and would avail myself at every opportunity to do teach and impart knowledge.
       </p>
       <div>
-        <a href="http://localhost:8080/ObinnaIsiwekpeni.pdf" class="download-button" download>Download</a>
+        <a href="http://localhost:8080/ObinnaIsiwekpeni.pdf" class="download-button" download>Download CV</a>
       </div>
     </div>
   </div>

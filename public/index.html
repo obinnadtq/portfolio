@@ -8,6 +8,13 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="tel" name="telephone" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+      <input type="submit" name="submit" />
+    </form>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>

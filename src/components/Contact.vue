@@ -57,22 +57,22 @@
           </ul>
           <p>
             <label for="name">NAME</label>
-            <input type="text" placeholder="Enter your name" v-model="name" />
+            <input type="text" placeholder="Enter your name" v-model="name" name="name" />
           </p>
           <p>
             <label for="number">PHONE NUMBER</label>
-            <input type="tel" placeholder="Enter your phone number" v-model="telephone" />
+            <input type="tel" placeholder="Enter your phone number" v-model="telephone" name="telephone" />
           </p>
           <p>
             <label for="email">EMAIL</label>
-            <input type="email" placeholder="Enter your email address" v-model="email" />
+            <input type="email" placeholder="Enter your email address" v-model="email" name="email"/>
           </p>
           <p>
             <label for="message">YOUR MESSAGE</label>
-            <textarea placeholder="Enter your message here" v-model="message"></textarea>
+            <textarea placeholder="Enter your message here" v-model="message" name="message"></textarea>
           </p>
           <p>
-            <input type="submit" value="Send Message" class="submit-button"/>
+            <input type="submit" value="Send Message" class="submit-button" name="submit"/>
           </p>
         </form>
       </div>

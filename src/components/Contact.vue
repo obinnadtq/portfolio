@@ -47,7 +47,8 @@
         </div>
       </div>
       <div class="contact-form">
-        <form @submit.prevent="checkForm" method="post" data-netlify="true" name="contact">
+        <form @submit.prevent="checkForm" method="post" data-netlify="true" name="contact" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
           <p v-if="errors.length">
             <b>Please correct the following error(s):</b>
           </p>

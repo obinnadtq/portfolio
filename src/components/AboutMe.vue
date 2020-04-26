@@ -8,7 +8,7 @@
       <p>
         I'm a Software Developer currently doing an Internship with DNV GL.
         I am passionate about creating software solutions for industries and private individuals.
-        I also enjoy sharing knowledge and would avail myself at every opportunity to do teach and impart knowledge.
+        I also enjoy sharing knowledge and would avail myself at every opportunity to teach and impart knowledge.
       </p>
       <div>
         <a href="http://localhost:8080/ObinnaIsiwekpeni.pdf" class="download-button" download>Download CV</a>

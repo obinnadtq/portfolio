@@ -47,7 +47,7 @@
         </div>
       </div>
       <div class="contact-form">
-        <form @submit.prevent="checkForm" method="post" data-netlify="true">
+        <form @submit.prevent="checkForm" method="post" data-netlify="true" name="contact">
           <p v-if="errors.length">
             <b>Please correct the following error(s):</b>
           </p>
@@ -97,7 +97,7 @@ export default {
     checkForm() {
       this.errors = [];
       if (this.name && this.email && this.message) {
-        let review = {
+        let information = {
           name: this.name,
           email: this.email,
           telephone: this.telephone,
@@ -108,7 +108,7 @@ export default {
         this.telephone = null;
         this.message = null;
         alert("Your message has been successfully sent");
-        return review;
+        return information;
       } else {
         if (!this.name) this.errors.push("Name Required");
         if (!this.email) this.errors.push("Email Address Required");

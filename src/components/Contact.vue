@@ -54,23 +54,25 @@
           <ul>
             <li v-for="error in errors" :key="error">{{error}}</li>
           </ul>
-          <label for="name">NAME</label>
-          <br />
-          <input type="text" placeholder="Enter your name" v-model="name" />
-          <br />
-          <label for="number">PHONE NUMBER</label>
-          <br />
-          <input type="tel" placeholder="Enter your phone number" v-model="telephone" />
-          <br />
-          <label for="email">EMAIL</label>
-          <br />
-          <input type="email" placeholder="Enter your email address" v-model="email" />
-          <br />
-          <label for="message">YOUR MESSAGE</label>
-          <br />
-          <textarea placeholder="Enter your message here" v-model="message"></textarea>
-          <br />
-          <input type="submit" value="Send Message" />
+          <p>
+            <label for="name">NAME</label>
+            <input type="text" placeholder="Enter your name" v-model="name" />
+          </p>
+          <p>
+            <label for="number">PHONE NUMBER</label>
+            <input type="tel" placeholder="Enter your phone number" v-model="telephone" />
+          </p>
+          <p>
+            <label for="email">EMAIL</label>
+            <input type="email" placeholder="Enter your email address" v-model="email" />
+          </p>
+          <p>
+            <label for="message">YOUR MESSAGE</label>
+            <textarea placeholder="Enter your message here" v-model="message"></textarea>
+          </p>
+          <p>
+            <input type="submit" value="Send Message" class="submit-button"/>
+          </p>
         </form>
       </div>
       <div></div>
@@ -92,28 +94,26 @@ export default {
   },
 
   methods: {
-    checkForm(e) {
-      if (this.name && this.email && this.message) {
-        return true;
-      }
+    checkForm() {
       this.errors = [];
-      this.name = "";
-      this.email = "";
-      this.telephone = "";
-      this.message = "";
-
-      if (!this.name) {
-        this.errors.push("Please enter your name");
+      if (this.name && this.email && this.message) {
+        let review = {
+          name: this.name,
+          email: this.email,
+          telephone: this.telephone,
+          message: this.message
+        };
+        this.name = null;
+        this.email = null;
+        this.telephone = null;
+        this.message = null;
+        alert("Your message has been successfully sent");
+        return review;
+      } else {
+        if (!this.name) this.errors.push("Name Required");
+        if (!this.email) this.errors.push("Email Address Required");
+        if (!this.message) this.errors.push("Please enter a message");
       }
-
-      if (!this.email) {
-        this.errors.push("Please enter your email address");
-      }
-
-      if (!this.message) {
-        this.errors.push("Please enter a message");
-      }
-      e.preventDefault();
     }
   }
 };
@@ -148,39 +148,34 @@ h1 {
 .info-class {
   padding: 5px;
 }
-
-input[type="text"],
-input[type="tel"],
-input[type="email"] {
-  width: 250%;
-  height: 10px;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border-radius: 4px;
-}
-
-input[type="submit"] {
-  width: 100%;
-  padding: 14px 20px;
-  margin: 8px 0;
+.submit-button {
   background-color: lightgray;
-  border-radius: 4px;
   cursor: pointer;
+  font-size: 16px;
 }
 
-input[type="submit"]:hover {
-  background-color: white;
-  color: #feb633;
+.submit-button:hover{
+   background-color: #feb633;
 }
+
+
+.contact-form {
+  width: 400px;
+}
+
+input {
+  width: 100%;
+  height: 35px;
+  margin-bottom: 20px;
+}
+
+
 
 textarea {
-  width: 250%;
+  width: 100%;
   height: 100px;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border-radius: 4px;
-  cursor: pointer;
 }
+
 a:link,
 a:visited {
   color: gray;
@@ -190,31 +185,6 @@ a:visited {
   .container {
     display: flex;
     flex-direction: column;
-  }
-  input[type="text"],
-  input[type="tel"],
-  input[type="email"] {
-    width: 300px;
-    height: 10px;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 4px;
-  }
-  textarea {
-    width: 300px;
-    height: 100px;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  input[type="submit"] {
-    width: 100px;
-    padding: 14px 10px;
-    margin: 8px 0;
-    background-color: lightgray;
-    border-radius: 4px;
-    cursor: pointer;
   }
 }
 </style>

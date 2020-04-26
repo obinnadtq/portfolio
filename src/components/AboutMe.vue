@@ -11,7 +11,7 @@
         I also enjoy sharing knowledge and would avail myself at every opportunity to teach and impart knowledge.
       </p>
       <div>
-        <a href="http://obinnaisiwekpeni.com/ObinnaIsiwekpeni.pdf" class="download-button" download>Download CV</a>
+        <a href="http://obinnaisiwekpeni.com/Obinna_Isiwekpeni.pdf" class="download-button" download>Download CV</a>
       </div>
     </div>
   </div>

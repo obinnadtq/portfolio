@@ -10,9 +10,6 @@
         I am passionate about creating software solutions for industries and private individuals.
         I also enjoy sharing knowledge and would avail myself at every opportunity to teach and impart knowledge.
       </p>
-      <div>
-        <a href="http://obinnaisiwekpeni.com/Obinna_Isiwekpeni.pdf" class="download-button" download>Download CV</a>
-      </div>
     </div>
   </div>
 </template>
